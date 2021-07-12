@@ -1,0 +1,32 @@
+
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Apply the application plugin to add support for building an application
+    id 'application'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test'
+        }
+    }
+}
+
+mainClassName = 'Program'
+
+dependencies {
+    compile fileTree(dir: 'lib', include: ['*.jar'])
+    testImplementation 'junit:junit:4.12'
+}
+
+repositories {
+    jcenter()
+}

@@ -1,0 +1,2 @@
+cmd: "./gradlew run"
+sh: true
